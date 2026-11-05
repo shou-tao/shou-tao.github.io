@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../resources/images/layer.png");
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.body_hide {
+    opacity: 0;
+    transition: .9s opacity ease-in-out;
+}
+
+.body_visible {
+    opacity: 1;
+}
+
+h1 {
+    font-size: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ul {
+    margin-top: -5px;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    align-items: center;
+    background-color: #190000;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: antiquewhite;
+    text-align: center;
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mainBlocks {
+    display: flex;
+    flex-direction: row;
+}
+
+.centerBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding-bottom: 10px;
+    color: #3a1700;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 auto 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.detailsButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: #190000 solid 3px;
+    padding: 1px 10px 3px 10px;
+}
+
+.detailsButton:hover {
+    background-color: #190000;
+    color: white;
+}
+
+.videoContainer {
+    width: 70%;
+    max-width: 800px;
+    margin: 20px auto;
+    aspect-ratio: 16 / 9;
+}
+
+.videoContainer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+video {
+    width: 70%;
+}
+
+.imageMainPage {
+    width: 140px;
+    margin-top: 15px;
+}
+
+.category {
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: darkred;
+}
+
+.mainText {
+    width: 100%;
+    padding-top: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+}
+
+/* ==============================
+   Адаптація для планшетів
+   ============================== */
+
+@media screen and (max-width: 1024px) {
+    .centerBlock {
+        width: 75%;
+        font-size: 24px;
+    }
+
+    .mainText {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .videoContainer {
+        width: 85%;
+    }
+
+    video {
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 21px;
+    }
+}
+
+
+/* ==============================
+   Адаптація для смартфонів
+   ============================== */
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .mainBlocks {
+        flex-direction: column;
+    }
+
+    .centerBlock {
+        width: 90%;
+        margin: 0 auto 15px;
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .imageMainPage {
+        width: 120px;
+        margin-top: 15px;
+    }
+
+    .mainText {
+        width: 100%;
+        font-size: 15px;
+        line-height: 22px;
+        text-align: justify;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .buttonContainer p {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .detailsButton {
+        width: 85%;
+        box-sizing: border-box;
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    .videoContainer {
+        width: 100%;
+        max-width: 100%;
+        margin: 15px auto;
+    }
+
+    video {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    footer {
+        height: auto;
+        min-height: 60px;
+        padding: 10px;
+        font-size: 13px;
+        line-height: 21px;
+    }
+}
+
+
+/* ==============================
+   Дуже маленькі смартфони
+   ============================== */
+
+@media screen and (max-width: 480px) {
+    .centerBlock {
+        width: 92%;
+    }
+
+    .imageMainPage {
+        width: 100px;
+    }
+
+    .mainText {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .detailsButton {
+        width: 95%;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    .videoContainer {
+        margin: 12px auto;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
